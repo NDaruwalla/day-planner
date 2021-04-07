@@ -125,3 +125,6 @@ $(window).on("load", function () {
 
 
 // Change time block colors based on local time variable
+// if the time right now is (greater than) > 8, then text area 8 should have the class of past
+// if the time right now is (the same as) == 8, then text area 8 should have the class of present
+// if the time right now is the (less than) < 8, then text area 8 should have the class of future
