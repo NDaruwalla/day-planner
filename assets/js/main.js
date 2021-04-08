@@ -4,8 +4,10 @@ $('#currentDay').text(today)
 //console.log(today)
 
 // Local time needed for determining past, present, future color coding
-let localTime = moment().format('HH');
-//console.log(localTime)
+// parseInt converts to integer
+//let localTime = parseInt(moment().format('H'));
+let localTime = (11);
+//console.log(localTime);
 
 
 // Button behavior for saving to local storage and preserving data upon browser refresh
@@ -128,3 +130,136 @@ $(window).on("load", function () {
 // if the time right now is (greater than) > 8, then text area 8 should have the class of past
 // if the time right now is (the same as) == 8, then text area 8 should have the class of present
 // if the time right now is the (less than) < 8, then text area 8 should have the class of future
+
+//https://stackoverflow.com/questions/1988514/javascript-css-how-to-add-and-remove-multiple-css-classes-to-an-element
+// 8:00 row
+if (localTime > 8 ) {
+    document.getElementById('ta08').className += ' past';
+};
+
+if (localTime === 8 ) {
+    document.getElementById('ta08').className += ' present';
+};
+
+if (localTime < 8 ) {
+    document.getElementById('ta08').className += ' future';
+};
+
+
+// 9:00 row
+if (localTime > 9 ) {
+    document.getElementById('ta09').className += ' past';
+};
+
+if (localTime === 9 ) {
+    document.getElementById('ta09').className += ' present';
+};
+
+if (localTime < 9 ) {
+    document.getElementById('ta09').className += ' future';
+};
+
+// 10:00 row
+if (localTime > 10 ) {
+    document.getElementById('ta10').className += ' past';
+};
+
+if (localTime === 10 ) {
+    document.getElementById('ta10').className += ' present';
+};
+
+if (localTime < 10 ) {
+    document.getElementById('ta10').className += ' future';
+};
+
+// 11:00 row
+if (localTime > 11 ) {
+    document.getElementById('ta11').className += ' past';
+};
+
+if (localTime === 11 ) {
+    document.getElementById('ta11').className += ' present';
+};
+
+if (localTime < 11 ) {
+    document.getElementById('ta11').className += ' future';
+};
+
+// 12:00 row
+if (localTime > 12 ) {
+    document.getElementById('ta12').className += ' past';
+};
+
+if (localTime === 12 ) {
+    document.getElementById('ta12').className += ' present';
+};
+
+if (localTime < 12 ) {
+    document.getElementById('ta12').className += ' future';
+};
+
+// 1:00 row
+if (localTime > 13 ) {
+    document.getElementById('ta01').className += ' past';
+};
+
+if (localTime === 13 ) {
+    document.getElementById('ta01').className += ' present';
+};
+
+if (localTime < 13 ) {
+    document.getElementById('ta01').className += ' future';
+};
+
+// 2:00 row
+if (localTime > 14 ) {
+    document.getElementById('ta02').className += ' past';
+};
+
+if (localTime === 14 ) {
+    document.getElementById('ta02').className += ' present';
+};
+
+if (localTime < 14 ) {
+    document.getElementById('ta02').className += ' future';
+};
+
+// 3:00 row
+if (localTime > 15 ) {
+    document.getElementById('ta03').className += ' past';
+};
+
+if (localTime === 15 ) {
+    document.getElementById('ta03').className += ' present';
+};
+
+if (localTime < 15 ) {
+    document.getElementById('ta03').className += ' future';
+};
+
+// 4:00 row
+if (localTime > 16 ) {
+    document.getElementById('ta04').className += ' past';
+};
+
+if (localTime === 16 ) {
+    document.getElementById('ta04').className += ' present';
+};
+
+if (localTime < 16 ) {
+    document.getElementById('ta04').className += ' future';
+};
+
+// 5:00 row
+if (localTime > 17 ) {
+    document.getElementById('ta05').className += ' past';
+};
+
+if (localTime === 17 ) {
+    document.getElementById('ta05').className += ' present';
+};
+
+if (localTime < 17 ) {
+    document.getElementById('ta05').className += ' future'; 
+    
+};
