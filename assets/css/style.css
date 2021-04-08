@@ -2,74 +2,111 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: beige;
 }
 
+ h1 {
+   padding-bottom: 1rem;
+ }
+
+ /* styling for text area */
 textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border: 1px solid black;
+  color: rgb(34, 10, 10);
+  font-size: 2rem;
+  border: 1px solid rgb(34, 10, 10);
   padding: 10px;
   
 }
-
+/* styling for jumbotron */
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-color: rgb(56, 7, 7);
+  color: beige;
+  margin-bottom: 1rem;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid rgb(34, 10, 10);
 }
 
+/* styling for dynamic time */
+.jumbotronTime {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+/* styles text area with cursive font */
 .description {
   white-space: pre-wrap;
   font-family: 'Caveat', cursive;
 }
 
+/* aligns planner time */
 .time-block {
   text-align: center;
   border-radius: 15px;
 }
 
+/* styles row */
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  /*border-top: 1px solid rgb(34, 10, 10); */
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: beige;
+  color: rgb(34, 10, 10);
+  border-top: 1px dashed rgb(34, 10, 10);
   text-align: center;
 }
 
+
+/* styling for text area according to current time */
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-color: rgb(180, 180, 168);
+  color: rgb(121, 121, 118);
   
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #e47872;
+  color: rgb(34, 10, 10);
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #7cc57c;
+  color: rgb(34, 10, 10);
 }
 
+/* save button styling */
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid rgb(34, 10, 10);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  background-color: rgb(56, 7, 7);
+  color: beige;
 }
 
 .saveBtn i:hover {
   font-size: 40px;
   transition: all 0.3s ease-in-out;
 }
+
+/* delete button centering */
+.delete {
+  text-align: center;
+  margin: auto;
+}
+
+/* delete button styling */
+.deleteBtn {
+  margin-top: 2rem;
+  border-radius: 15px;
+  height: 4rem;
+  background-color: rgb(56, 7, 7);
+  color: beige;
+  font-size: 1rem;
+ }

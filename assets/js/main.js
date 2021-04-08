@@ -1,14 +1,20 @@
 // This is the date in the jumbotron/header using moment
-let today = moment().format('LLLL');
-$('#currentDay').text(today)
+// it is put into a function to auto update every second
+function updateTimer() {
+let today = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+$('#currentDay').text(today);
+//setInterval($('#currentDay').text(today), 1000);
 //console.log(today)
 
 // Local time needed for determining past, present, future color coding
 // parseInt converts to integer
-//let localTime = parseInt(moment().format('H'));
-let localTime = (11);
+let localTime = parseInt(moment().format('H'));
+// let localTime = (10);
+// console.log(localTime);
+ updateColors(localTime);
 //console.log(localTime);
 
+}
 
 // Button behavior for saving to local storage and preserving data upon browser refresh
 // code for 8:00 row
@@ -113,6 +119,8 @@ function runUpdate05() {
 
 // This section of code is used to retrieve the last saved values in the text boxes from localstorage
 $(window).on("load", function () {
+setInterval(updateTimer, 1000);
+//setInterval(updateColors, 1000);
     ta08html.value = localStorage.getItem('ta08text');
     ta09html.value = localStorage.getItem('ta09text');
     ta10html.value = localStorage.getItem('ta10text');
@@ -132,134 +140,147 @@ $(window).on("load", function () {
 // if the time right now is the (less than) < 8, then text area 8 should have the class of future
 
 //https://stackoverflow.com/questions/1988514/javascript-css-how-to-add-and-remove-multiple-css-classes-to-an-element
+//https://stackoverflow.com/questions/34625764/moment-js-dynamically-update-time-in-seconds
+
+
+//row colors are updated dynamically according to current time
 // 8:00 row
-if (localTime > 8 ) {
-    document.getElementById('ta08').className += ' past';
+function updateColors (val1){
+if (val1 > 8 ) {
+    document.getElementById('ta08').className = 'col-9 description past';
 };
 
-if (localTime === 8 ) {
-    document.getElementById('ta08').className += ' present';
+if (val1 === 8 ) {
+    document.getElementById('ta08').className = 'col-9 description present';
 };
 
-if (localTime < 8 ) {
-    document.getElementById('ta08').className += ' future';
+if (val1 < 8 ) {
+    document.getElementById('ta08').className = 'col-9 description future';
 };
 
 
 // 9:00 row
-if (localTime > 9 ) {
-    document.getElementById('ta09').className += ' past';
+if (val1 > 9 ) {
+    document.getElementById('ta09').className = 'col-9 description past';
 };
 
-if (localTime === 9 ) {
-    document.getElementById('ta09').className += ' present';
+if (val1 === 9 ) {
+    document.getElementById('ta09').className = 'col-9 description present';
 };
 
-if (localTime < 9 ) {
-    document.getElementById('ta09').className += ' future';
+if (val1 < 9 ) {
+    document.getElementById('ta09').className = 'col-9 description future';
 };
 
 // 10:00 row
-if (localTime > 10 ) {
-    document.getElementById('ta10').className += ' past';
+if (val1 > 10 ) {
+    document.getElementById('ta10').className = 'col-9 description past';
 };
 
-if (localTime === 10 ) {
-    document.getElementById('ta10').className += ' present';
+if (val1 === 10 ) {
+    document.getElementById('ta10').className = 'col-9 description present';
 };
 
-if (localTime < 10 ) {
-    document.getElementById('ta10').className += ' future';
+if (val1 < 10 ) {
+    document.getElementById('ta10').className = 'col-9 description future';
 };
 
 // 11:00 row
-if (localTime > 11 ) {
-    document.getElementById('ta11').className += ' past';
+if (val1 > 11 ) {
+    document.getElementById('ta11').className = 'col-9 description past';
 };
 
-if (localTime === 11 ) {
-    document.getElementById('ta11').className += ' present';
+if (val1 === 11 ) {
+    document.getElementById('ta11').className = 'col-9 description present';
 };
 
-if (localTime < 11 ) {
-    document.getElementById('ta11').className += ' future';
+if (val1 < 11 ) {
+    document.getElementById('ta11').className = 'col-9 description future';
 };
 
 // 12:00 row
-if (localTime > 12 ) {
-    document.getElementById('ta12').className += ' past';
+if (val1 > 12 ) {
+    document.getElementById('ta12').className = 'col-9 description past';
 };
 
-if (localTime === 12 ) {
-    document.getElementById('ta12').className += ' present';
+if (val1 === 12 ) {
+    document.getElementById('ta12').className = 'col-9 description present';
 };
 
-if (localTime < 12 ) {
-    document.getElementById('ta12').className += ' future';
+if (val1 < 12 ) {
+    document.getElementById('ta12').className = 'col-9 description future';
 };
 
 // 1:00 row
-if (localTime > 13 ) {
-    document.getElementById('ta01').className += ' past';
+if (val1 > 13 ) {
+    document.getElementById('ta01').className = 'col-9 description past';
 };
 
-if (localTime === 13 ) {
-    document.getElementById('ta01').className += ' present';
+if (val1 === 13 ) {
+    document.getElementById('ta01').className = 'col-9 description present';
 };
 
-if (localTime < 13 ) {
-    document.getElementById('ta01').className += ' future';
+if (val1 < 13 ) {
+    document.getElementById('ta01').className = 'col-9 description future';
 };
 
 // 2:00 row
-if (localTime > 14 ) {
-    document.getElementById('ta02').className += ' past';
+if (val1 > 14 ) {
+    document.getElementById('ta02').className = 'col-9 description past';
 };
 
-if (localTime === 14 ) {
-    document.getElementById('ta02').className += ' present';
+if (val1 === 14 ) {
+    document.getElementById('ta02').className = 'col-9 description present';
 };
 
-if (localTime < 14 ) {
-    document.getElementById('ta02').className += ' future';
+if (val1 < 14 ) {
+    document.getElementById('ta02').className = 'col-9 description future';
 };
 
 // 3:00 row
-if (localTime > 15 ) {
-    document.getElementById('ta03').className += ' past';
+if (val1 > 15 ) {
+    document.getElementById('ta03').className = 'col-9 description past';
 };
 
-if (localTime === 15 ) {
-    document.getElementById('ta03').className += ' present';
+if (val1 === 15 ) {
+    document.getElementById('ta03').className = 'col-9 description present';
 };
 
-if (localTime < 15 ) {
-    document.getElementById('ta03').className += ' future';
+if (val1 < 15 ) {
+    document.getElementById('ta03').className = 'col-9 description future';
 };
 
 // 4:00 row
-if (localTime > 16 ) {
-    document.getElementById('ta04').className += ' past';
+if (val1 > 16 ) {
+    document.getElementById('ta04').className = 'col-9 description past';
 };
 
-if (localTime === 16 ) {
-    document.getElementById('ta04').className += ' present';
+if (val1 === 16 ) {
+    document.getElementById('ta04').className = 'col-9 description present';
 };
 
-if (localTime < 16 ) {
-    document.getElementById('ta04').className += ' future';
+if (val1 < 16 ) {
+    document.getElementById('ta04').className = 'col-9 description future';
 };
 
 // 5:00 row
-if (localTime > 17 ) {
-    document.getElementById('ta05').className += ' past';
+if (val1 > 17 ) {
+    document.getElementById('ta05').className = 'col-9 description past';
 };
 
-if (localTime === 17 ) {
-    document.getElementById('ta05').className += ' present';
+if (val1 === 17 ) {
+    document.getElementById('ta05').className = ' col-9 description present';
 };
 
-if (localTime < 17 ) {
-    document.getElementById('ta05').className += ' future'; 
+if (val1 < 17 ) {
+    document.getElementById('ta05').className = 'col-9 description future'; 
     
 };
+
+};
+
+//enables the deletion of local storage data and resets the day planner entries to blank
+$("#deleteEntries").click(function(){
+    localStorage.clear();
+    location.reload()
+})

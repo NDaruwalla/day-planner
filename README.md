@@ -2,7 +2,7 @@
 
 ## Description
 
-I created a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.  The [Moment.js](https://momentjs.com/) library was implemented for the date and time.
+I created a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.  The [Moment.js](https://momentjs.com/) library was implemented for the date and time. Some base html and css was provided and modified as needed.
 
 
 ## User Story
@@ -17,8 +17,9 @@ SO THAT I can manage my time effectively
 
 ```
 * User can enter daily activities by hour and save them to local storage
-* here
-*
+* The current day and time displays dynamically without refreshing the page
+* User can identify past, present, and future activities based on dynamic color coding
+* The user can delete all planner entries by pressing a delete button
 
 ```
 ## Tools Used
@@ -32,17 +33,13 @@ SO THAT I can manage my time effectively
 * JavaScript
 
 ```
-## Pseudo Code
-
-* day planner pseudo code here
-* here...
-
 
 ## Screen Capture
 
 The following shows the visual display and functionality of the day planner:
 
-![A user enters daily plans for each hour](assets/images/planner.jpg)
+![A user enters daily plans for each hour](assets/images/screen1.jpg)
+![Time block colors are dynamically updated without refreshing page](assets/images/screen2.jpg)
 
 
 ## Deployed application

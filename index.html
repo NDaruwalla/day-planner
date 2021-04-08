@@ -17,11 +17,12 @@
   <title>Work Day Scheduler</title>
 </head>
 
-  <body>
+   <body>
+      <!-- Jumbotron header -->
     <header class="jumbotron">
       <h1 class="display-3">Nicole's Work Day Scheduler</h1>
-      <p class="lead">My scheduled activities for today:</p>
-      <p id="currentDay" class="display-5 lead"></p>
+      <p class=" display-5 lead">My scheduled activities for today:</p>
+      <p id="currentDay" class="display-4 lead jumbotronTime"></p>
     </header>
     <div class="container">
 
@@ -85,7 +86,12 @@
         <textarea id="ta05" class="col-9 description"></textarea>
         <button id="saveNote05" class="col-1 saveBtn"><i class="fas fa-book-reader"></i></button>
       </div>
+  
+    </div>
 
+     <!-- delete button to clear all entries -->
+    <div class= "delete">
+      <button id="deleteEntries" class="col-2 deleteBtn text-center">Delete all entries</button>
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
